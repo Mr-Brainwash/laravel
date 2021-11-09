@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Новость 1",
+        "text": "А у нас новость 1 и она очень хорошая!",
+        "category_id": 1,
+        "isPrivate": true
+    },
+    {
+        "id": 2,
+        "title": "Новость 2",
+        "text": "А тут плохие новости(((",
+        "category_id": 2,
+        "isPrivate": false
+    },
+    {
+        "id": 3,
+        "title": "Новость 1",
+        "text": "А у нас новость 1 и она очень хорошая!",
+        "category_id": 1,
+        "isPrivate": true
+    },
+    {
+        "id": 4,
+        "title": "Новость 2",
+        "text": "А тут плохие новости(((",
+        "category_id": 2,
+        "isPrivate": false
+    },
+    {
+        "id": 35,
+        "title": "Sports News",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla ipsum quis euismod efficitur. Curabitur nec nisl nec lacus luctus ultrices eget in felis. Vivamus ullamcorper mi turpis, quis varius felis venenatis sed. Ut hendrerit diam at dui posuere placerat. Vestibulum vulputate bibendum aliquam. Sed dictum dictum lorem, quis rutrum orci hendrerit vel. Donec libero purus, hendrerit quis congue id, elementum eget orci.",
+        "category_id": "1",
+        "isPrivate": "1"
+    }
+]
