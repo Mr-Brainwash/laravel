@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Новость 1",
+        "text": "А у нас новость 1 и она очень хорошая!",
+        "category_id": 1,
+        "image": null,
+        "isPrivate": true
+    },
+    {
+        "id": 2,
+        "title": "Новость 2",
+        "text": "А тут плохие новости(((",
+        "category_id": 2,
+        "image": null,
+        "isPrivate": false
+    },
+    {
+        "title": "ertyu",
+        "text": "vhm,v",
+        "category_id": "2",
+        "image": "\/storage\/img\/3YR3IN4sxA8317pgsTASB7g1STTgotCxfpki5Pxh.jpg",
+        "id": 2,
+        "isPrivate": false
+    }
+]
