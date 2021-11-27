@@ -28,7 +28,7 @@ class NewsController extends Controller
     public function store(Request $request, News $news)
     {
         $request->flash();
-
+        $request->validate($news->rules(),[],$news->attributeNames());
         $url = null;
         if ($request->file('image')) {
             $path = Storage::putFile('public/img', $request->file('image'));
@@ -57,6 +57,7 @@ class NewsController extends Controller
 
     public function update(Request $request, News $news)
     {
+        //$request->validate($news->rules(),[],$news->attributeNames());
         $url = null;
         if ($request->file('image')) {
             $path = Storage::putFile('public/img', $request->file('image'));
@@ -68,4 +69,5 @@ class NewsController extends Controller
 
         return redirect()->route('news.one', $news->id)->with('success', 'Новость изменена');
     }
+
 }
