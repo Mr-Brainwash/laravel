@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\IndexController as AdminController;
 use App\Http\Controllers\Admin\NewsController as AdminNewsController;
+use UniSharp\LaravelFilemanager\Lfm;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,6 +61,9 @@ Route::name('admin.')
 
     });
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth', 'is_admin']], function () {
+    Lfm::routes();
+});
 Route::get('/auth/vk', [LoginController::class, 'loginVK'])->name('vkLogin');
 Route::get('/auth/vk/response', [LoginController::class, 'responseVK'])->name('vkResponse');
 
