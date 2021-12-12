@@ -1,6 +1,6 @@
 .card-img {
-    height: 150px;
+    margin: 15px 0 15px 0;
+    height: 200px;
     background-position: center center;
-    background-size: cover;
     background-repeat: no-repeat;
 }

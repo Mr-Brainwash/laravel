@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('title', 'Логин')
+
+@section('menu')
+    @include('admin.menu')
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -15,7 +21,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') ?? __('admin@admin.ru') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +35,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="123" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -53,6 +59,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
+                                <a href="{{ route('vkLogin') }}"><img src="vk.png" alt="" width="40"></a>
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>

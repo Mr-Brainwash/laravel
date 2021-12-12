@@ -15,7 +15,7 @@
                         @if ($news)
                             <h2 class="text-center">{{ $news->title }}</h2>
                             <div class="card-img" style="background-image: url({{ $news->image ?? asset('storage/img/default.jpeg') }})"></div>
-                            @if (!$news->isPrivate)
+                            @if (!$news->isPrivate || Auth::id())
                                 <p class="text-center">{{ $news->text }}</p>
                             @else
                                 <p class="text-center">Зарегистрируйтесь для просмотра</p>
